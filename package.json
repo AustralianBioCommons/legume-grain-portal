@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier --check",
-    "prepare": "husky install"
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky init"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
@@ -62,6 +63,8 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "globals": "16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "postcss": "8.5.6",
     "prettier": "3.5.3",
     "tailwind-variants": "2.0.1",
