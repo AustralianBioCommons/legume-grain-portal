@@ -2,10 +2,9 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
-
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -23,9 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { color: "white" },
-  ],
+  themeColor: [{ color: "white" }],
 };
 
 export default function RootLayout({
@@ -42,10 +39,10 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-      <HeaderImage/>
-            <main className="container mx-auto max-w-7xl pt-4 px-6 flex-grow">
-              {children}
-            </main>
+        <HeaderImage />
+        <main className="container mx-auto max-w-7xl pt-4 px-6 flex-grow">
+          {children}
+        </main>
       </body>
     </html>
   );

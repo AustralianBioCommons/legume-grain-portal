@@ -1,6 +1,7 @@
 # Next.js & HeroUI Template
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+This is a template for creating applications using Next.js 14 (app directory)
+and HeroUI (v2).
 
 [Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
 
@@ -18,7 +19,8 @@ This is a template for creating applications using Next.js 14 (app directory) an
 
 ### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
+To create a new project based on this template using `create-next-app`, run the
+following command:
 
 ```bash
 npx create-next-app -e https://github.com/heroui-inc/next-app-template
@@ -40,14 +42,17 @@ npm run dev
 
 ### Setup pnpm (optional)
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+If you are using `pnpm`, you need to add the following code to your `.npmrc`
+file:
 
 ```bash
 public-hoist-pattern[]=*@heroui/*
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+After modifying the `.npmrc` file, you need to run `pnpm install` again to
+ensure that the dependencies are installed correctly.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+Licensed under the
+[MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
