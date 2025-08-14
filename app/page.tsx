@@ -1,56 +1,53 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
+import LinkCard from "@/components/LinkCard";
+import { faListCheck } from "@fortawesome/free-solid-svg-icons/faListCheck";
+import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons/faCircleQuestion";
+import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons/faPeopleGroup";
+import DataAtlasCard from "@/components/DataAtlasCard";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+interface Links {
+  icon: IconProp;
+  title: string;
+  subTitle?: string;
+  linkUrl: string;
+}
+
+const links: Links[] = [
+  {
+    icon: faListCheck,
+    title: "Aims",
+    subTitle: "Aims of the project",
+    linkUrl: "/aims",
+  },
+  {
+    icon: faCircleQuestion,
+    title: "Background/Context",
+    subTitle: "Role of legumes in feed and agriculture",
+    linkUrl: "/background",
+  },
+  {
+    icon: faPeopleGroup,
+    title: "Collaborators",
+    subTitle: "Meet the team",
+    linkUrl: "/collaborators",
+  },
+];
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
+      <h2 className={"font-bold text-2xl text-slate-900"}>Quick links</h2>
+      <div className={"flex flex-row flex-wrap gap-4"}>
+        {links.map((link) => (
+          <LinkCard key={link.title} {...link} />
+        ))}
       </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div>
+      <h2 className={"mt-8 font-bold text-2xl text-slate-900"}>Data atlases</h2>
+      <DataAtlasCard
+        image={"/img/fababean-logo.jpeg"}
+        title={"Faba Bean 'Omics Atlas"}
+        siteUrl={"https://germinate.ppa.staging.biocommons.org.au/#/home"}
+      />
     </section>
   );
 }
