@@ -1,10 +1,11 @@
 import createMDX from "@next/mdx";
 
+const isProd = process.env.NODE_ENV === "production";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/legume-grain-portal",
-  assetPrefix: "/legume-grain-portal/",
+  basePath: isProd ? "/legume-grain-portal" : "",
+  assetPrefix: isProd ? "/legume-grain-portal/" : "/",
   pageExtensions: ["md", "mdx", "ts", "tsx"],
 };
 
