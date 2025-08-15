@@ -18,7 +18,7 @@ export default function LinkCard(props: LinkCardProps) {
       <Card
         {...cardProps}
         className={clsx(
-          "w-full grow md:grow-0 md:w-80 h-32 p-2 rounded-none bg-green-100 border-1 border-green-300",
+          "w-full grow md:grow-0 md:w-80 h-32 p-2 rounded-none bg-bcgreen border-1 border-green-300",
           className,
         )}
       >

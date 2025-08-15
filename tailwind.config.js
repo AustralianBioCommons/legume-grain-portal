@@ -13,6 +13,9 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      colors: {
+        bcgreen: "#e8f6f0",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
