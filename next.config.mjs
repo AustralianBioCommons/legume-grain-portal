@@ -3,6 +3,7 @@ import createMDX from "@next/mdx";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: "/legume-grain-portal",
   pageExtensions: ["md", "mdx", "ts", "tsx"],
 };
 
