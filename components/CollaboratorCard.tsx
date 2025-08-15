@@ -1,6 +1,7 @@
 import { Card, CardBody, CardFooter, CardProps } from "@heroui/card";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
+import NextImage from "next/image";
 
 interface CollaboratorCardProps extends CardProps {
   image: string;
@@ -13,14 +14,18 @@ export default function CollaboratorCard(props: CollaboratorCardProps) {
   return (
     <Card
       {...cardProps}
-      className={clsx("h-72 max-w-72 p-2 rounded-none", className)}
+      className={clsx("h-80 w-72 p-2 rounded-none overflow-clip", className)}
     >
-      <CardBody className="justify-center items-center">
+      <CardBody className="w-64 h-64 justify-center items-center">
         <Image
           src={image}
           alt={`${{ title }} logo`}
-          className="h-full object-cover"
+          className="object-scale-down"
+          height={200}
+          width={200}
+          as={NextImage}
           radius={"none"}
+          removeWrapper
         />
       </CardBody>
       <CardFooter className="justify-center">

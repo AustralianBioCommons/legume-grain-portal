@@ -79,8 +79,8 @@ export default function Collaborators() {
         <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
         <span className="text-lg">Back</span>
       </a>
-      <h1 className="text-4xl font-bold text-slate-950">Collaborators</h1>
-      <div className="flex flex-row flex-wrap gap-4 items-center justify-center">
+      <h1 className="text-4xl font-bold mb-4 text-slate-950">Collaborators</h1>
+      <div className="flex flex-row flex-wrap gap-4 mb-10 items-center justify-center">
         {collaborators
           .sort((c1, c2) => c1.name.localeCompare(c2.name))
           .map((collaborator) => {
