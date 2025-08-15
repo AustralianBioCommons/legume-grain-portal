@@ -4,6 +4,12 @@ import React from "react";
 import CollaboratorCard from "@/components/CollaboratorCard";
 import { addBasePath } from "next/dist/client/add-base-path";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Collaborators",
+  description: "Organisations involved in the project",
+};
 
 interface Collaborator {
   id: string;
