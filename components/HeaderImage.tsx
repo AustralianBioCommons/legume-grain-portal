@@ -19,8 +19,8 @@ export default function HeaderImage() {
         width={2000}
         height={300}
       />
-      <CardHeader className="absolute z-10 top-1/2 -translate-y-1/2 left-2 right-2 bg-white/60 w-fit p-4 rounded-lg">
-        <h2 className="text-4xl font-bold text-slate-900">
+      <CardHeader className="absolute justify-center md:max-w-3xl top-1/2 -translate-y-1/2 z-10 bg-white/70 p-4 md:rounded-lg">
+        <h2 className="text-center text-4xl font-extrabold text-green-950">
           The Legume Grain 'Omics Initiative
         </h2>
       </CardHeader>
