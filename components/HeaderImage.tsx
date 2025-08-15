@@ -13,8 +13,8 @@ export default function HeaderImage() {
         className="z-0 h-full w-full object-cover"
         radius={"none"}
         loading="eager"
-        priority
         disableSkeleton
+        removeWrapper
         width={2000}
         height={300}
       />
