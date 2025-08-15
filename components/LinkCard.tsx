@@ -2,6 +2,7 @@ import { Card, CardBody, CardProps } from "@heroui/card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import clsx from "clsx";
+import Link from "next/link";
 
 interface LinkCardProps extends CardProps {
   icon: IconProp;
@@ -13,7 +14,7 @@ interface LinkCardProps extends CardProps {
 export default function LinkCard(props: LinkCardProps) {
   const { icon, className, linkUrl, title, subTitle, ...cardProps } = props;
   return (
-    <a href={linkUrl} className="grow">
+    <Link href={linkUrl} className="grow">
       <Card
         {...cardProps}
         className={clsx(
@@ -31,6 +32,6 @@ export default function LinkCard(props: LinkCardProps) {
           </div>
         </CardBody>
       </Card>
-    </a>
+    </Link>
   );
 }

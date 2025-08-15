@@ -3,6 +3,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import React from "react";
 import CollaboratorCard from "@/components/CollaboratorCard";
 import { addBasePath } from "next/dist/client/add-base-path";
+import Link from "next/link";
 
 interface Collaborator {
   id: string;
@@ -76,10 +77,10 @@ export default function Collaborators() {
         "mx-auto flex flex-col items-center justify-center gap-4 mb-12"
       }
     >
-      <a href="/" className="ml-4 mb-4">
+      <Link href="/" className="ml-4 mb-4">
         <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
         <span className="text-lg">Back</span>
-      </a>
+      </Link>
       <h1 className="text-4xl font-bold mb-4 text-slate-950">Collaborators</h1>
       <div className="flex flex-row flex-wrap gap-4 mb-10 items-center justify-center">
         {collaborators
