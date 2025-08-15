@@ -5,6 +5,7 @@ import CollaboratorCard from "@/components/CollaboratorCard";
 import { addBasePath } from "next/dist/client/add-base-path";
 import Link from "next/link";
 import { Metadata } from "next";
+import { Button } from "@heroui/button";
 
 export const metadata: Metadata = {
   title: "Collaborators",
@@ -79,13 +80,13 @@ const collaborators: Collaborator[] = [
 export default function Collaborators() {
   return (
     <div
-      className={
-        "mx-auto flex flex-col items-center justify-center gap-4 mb-12"
-      }
+      className={"mx-auto max-w-4xl flex flex-col justify-center gap-4 mb-12"}
     >
-      <Link href="/" className="ml-4 mb-4">
-        <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
-        <span className="text-lg">Back</span>
+      <Link href="/" className="ml-2 mb-4">
+        <Button variant="flat">
+          <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
+          <span className="text-lg">Back</span>
+        </Button>
       </Link>
       <h1 className="text-4xl font-bold mb-4 text-slate-950">Collaborators</h1>
       <div className="flex flex-row flex-wrap gap-4 mb-10 items-center justify-center">
