@@ -13,6 +13,13 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: "80ch",
+          },
+        },
+      }),
     },
   },
   darkMode: "class",

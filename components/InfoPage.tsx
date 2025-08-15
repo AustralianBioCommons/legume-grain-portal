@@ -9,7 +9,12 @@ interface InfoPageProps extends React.ComponentProps<"div"> {
 export function InfoPage(props: InfoPageProps) {
   const { children, title, ...other } = props;
   return (
-    <div {...other} className={"max-w-xl mx-auto flex flex-col gap-4 mb-12"}>
+    <div
+      {...other}
+      className={
+        "max-w-2xl mx-auto items-center justify-center flex flex-col gap-4 mb-12"
+      }
+    >
       <a href="/" className="ml-4 mb-4">
         <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
         <span className="text-lg">Back</span>

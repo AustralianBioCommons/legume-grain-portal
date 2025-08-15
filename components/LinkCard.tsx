@@ -17,7 +17,7 @@ export default function LinkCard(props: LinkCardProps) {
       <Card
         {...cardProps}
         className={clsx(
-          "w-full grow md:grow-0 md:w-72 h-24 p-2 rounded-none bg-green-300",
+          "w-full grow md:grow-0 md:w-80 h-32 p-2 rounded-none bg-green-200 border-1 border-green-400",
           className,
         )}
       >
@@ -26,7 +26,7 @@ export default function LinkCard(props: LinkCardProps) {
           <div className="grow ml-4">
             <h2 className="text-lg font-bold text-gray-900">{props.title}</h2>
             {subTitle && (
-              <span className="text-sm text-gray-700">{subTitle}</span>
+              <span className="text-sm text-gray-600">{subTitle}</span>
             )}
           </div>
         </CardBody>
