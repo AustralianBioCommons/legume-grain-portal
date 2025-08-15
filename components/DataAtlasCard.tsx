@@ -1,6 +1,7 @@
 import { Card, CardBody, CardFooter, CardProps } from "@heroui/card";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
+import NextImage from "next/image";
 
 interface DataAtlasCardProps extends CardProps {
   image: string;
@@ -14,14 +15,20 @@ export default function DataAtlasCard(props: DataAtlasCardProps) {
     <a href={siteUrl}>
       <Card
         {...cardProps}
-        className={clsx("w-72 h-72 p-2 rounded-none", className)}
+        className={clsx(
+          "w-72 h-80 p-2 items-center justify-center rounded-none",
+          className,
+        )}
       >
-        <CardBody>
+        <CardBody className={"w-64 h-64 items-center justify-center"}>
           <Image
             src={image}
             alt={`${{ title }} logo`}
-            className="w-full h-full object-cover"
+            className="object-scale-down"
             radius={"none"}
+            as={NextImage}
+            width={200}
+            height={200}
           />
         </CardBody>
         <CardFooter className="justify-center">
