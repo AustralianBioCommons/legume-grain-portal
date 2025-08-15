@@ -11,9 +11,7 @@ export function InfoPage(props: InfoPageProps) {
   return (
     <div
       {...other}
-      className={
-        "max-w-2xl mx-auto items-center justify-center flex flex-col gap-4 mb-12"
-      }
+      className={"max-w-2xl mx-auto justify-center flex flex-col gap-4 mb-12"}
     >
       <a href="/" className="ml-4 mb-4">
         <FontAwesomeIcon icon={faArrowLeft} className={"mr-2"} size="xl" />
