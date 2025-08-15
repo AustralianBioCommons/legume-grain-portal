@@ -1,7 +1,6 @@
 import { Card, CardBody, CardFooter, CardProps } from "@heroui/card";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
-import NextImage from "next/image";
 
 interface CollaboratorCardProps extends CardProps {
   image: string;
@@ -23,7 +22,6 @@ export default function CollaboratorCard(props: CollaboratorCardProps) {
           className="object-scale-down"
           height={200}
           width={200}
-          as={NextImage}
           radius={"none"}
           removeWrapper
         />

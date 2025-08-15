@@ -1,6 +1,5 @@
 import { Card, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
-import NextImage from "next/image";
 
 export default function HeaderImage() {
   return (
@@ -16,7 +15,6 @@ export default function HeaderImage() {
         loading="eager"
         priority
         disableSkeleton
-        as={NextImage}
         width={2000}
         height={300}
       />
