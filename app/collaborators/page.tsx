@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import React from "react";
 import CollaboratorCard from "@/components/CollaboratorCard";
+import { addBasePath } from "next/dist/client/add-base-path";
 
 interface Collaborator {
   id: string;
@@ -10,61 +11,61 @@ interface Collaborator {
 }
 
 const collaborators: Collaborator[] = [
-  { name: "NCRIS", id: "ncris", image: "/img/logos/ncris.jpg" },
+  { name: "NCRIS", id: "ncris", image: addBasePath("/img/logos/ncris.jpg") },
   {
     name: "Bioplatforms Australia",
     id: "bioplatforms",
-    image: "/img/logos/bioplatforms.webp",
+    image: addBasePath("/img/logos/bioplatforms.webp"),
   },
   {
     name: "La Trobe / LISAF",
     id: "latrobe",
-    image: "/img/logos/latrobe-lisaf.png",
+    image: addBasePath("/img/logos/latrobe-lisaf.png"),
   },
   {
     name: "Adelaide University",
     id: "adelaide",
-    image: "/img/logos/adelaide-university.png",
+    image: addBasePath("/img/logos/adelaide-university.png"),
   },
   {
     name: "SARDI",
     id: "sardi",
-    image: "/img/logos/sardi.jpg",
+    image: addBasePath("/img/logos/sardi.jpg"),
   },
   {
     name: "Australian Plant Phenomics Network",
     id: "appn",
-    image: "/img/logos/appn.png",
+    image: addBasePath("/img/logos/appn.png"),
   },
   {
     name: "AGRF",
     id: "agrf",
-    image: "/img/logos/agrf.jpg",
+    image: addBasePath("/img/logos/agrf.jpg"),
   },
   {
     name: "Australian BioCommons",
     id: "biocommons",
-    image: "/img/logos/biocommons.png",
+    image: addBasePath("/img/logos/biocommons.png"),
   },
   {
     name: "Metabolomics Australia",
     id: "metabolomics",
-    image: "/img/logos/metabolomics.png",
+    image: addBasePath("/img/logos/metabolomics.png"),
   },
   {
     name: "University of South Australia",
     id: "unisa",
-    image: "/img/logos/uni-sa.png",
+    image: addBasePath("/img/logos/uni-sa.png"),
   },
   {
     name: "University of Western Australia",
     id: "uwa",
-    image: "/img/logos/uwa.png",
+    image: addBasePath("/img/logos/uwa.png"),
   },
   {
     name: "University of Sydney",
     id: "sydney-uni",
-    image: "/img/logos/sydney-uni.png",
+    image: addBasePath("/img/logos/sydney-uni.png"),
   },
 ];
 

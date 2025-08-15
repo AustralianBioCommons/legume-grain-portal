@@ -1,5 +1,6 @@
 import { InfoPage } from "@/components/InfoPage";
 import { Image } from "@heroui/image";
+import { addBasePath } from "next/dist/client/add-base-path";
 
 <InfoPage title="Background/Context">
   ## Grain legumes are important food and feed
@@ -71,7 +72,7 @@ crucial role in economic sustainability, ecological health, and the **growing
 demand for plant-based protein** in both food and feed markets.
 
 <Image
-  src="/img/legume-graph.png"
+  src={addBasePath("/img/legume-graph.png")}
   alt="Dollar value and tonnes for different grain legume crops"
   width={550}
   height={350}

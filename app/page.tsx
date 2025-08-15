@@ -4,6 +4,7 @@ import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons/faCircleQues
 import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons/faPeopleGroup";
 import DataAtlasCard from "@/components/DataAtlasCard";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { addBasePath } from "next/dist/client/add-base-path";
 
 interface Links {
   icon: IconProp;
@@ -44,7 +45,7 @@ export default function Home() {
       </div>
       <h2 className={"mt-8 font-bold text-2xl text-slate-900"}>Data atlases</h2>
       <DataAtlasCard
-        image={"/img/fababean-logo.jpeg"}
+        image={addBasePath("/img/fababean-logo.jpeg")}
         title={"Faba Bean 'Omics Atlas"}
         siteUrl={"https://germinate.ppa.staging.biocommons.org.au/#/home"}
       />

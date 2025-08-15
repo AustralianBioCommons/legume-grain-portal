@@ -1,5 +1,6 @@
 import { Card, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
+import { addBasePath } from "next/dist/client/add-base-path";
 
 export default function HeaderImage() {
   return (
@@ -8,7 +9,7 @@ export default function HeaderImage() {
       className="w-full overflow-hidden flex flex-col items-center"
     >
       <Image
-        src="/img/Header-Opt1.jpg"
+        src={addBasePath("/img/Header-Opt1.jpg")}
         alt="Header image"
         className="z-0 h-full w-full object-cover"
         radius={"none"}
