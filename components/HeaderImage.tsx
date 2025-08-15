@@ -6,7 +6,7 @@ export default function HeaderImage() {
   return (
     <Card
       radius={"none"}
-      className="w-full overflow-hidden flex flex-col items-center"
+      className="w-full overflow-hidden h-64 md:h-80 flex flex-col items-center"
     >
       <Image
         src={addBasePath("/img/Header-Opt1.jpg")}
@@ -17,7 +17,7 @@ export default function HeaderImage() {
         disableSkeleton={true}
         disableAnimation={true}
         width={2000}
-        height={300}
+        height={320}
       />
       <CardHeader className="absolute backdrop-blur-xs justify-center md:max-w-3xl top-1/2 -translate-y-1/2 z-10 bg-white/40 p-4 md:rounded-lg">
         <h2 className="text-center text-4xl font-extrabold text-green-950">

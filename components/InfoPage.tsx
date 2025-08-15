@@ -23,7 +23,6 @@ export function InfoPage(props: InfoPageProps) {
           <span className="text-lg">Back</span>
         </Button>
       </Link>
-      <h1 className="text-4xl font-bold text-slate-950">{props.title}</h1>
       <MdxLayout>{children}</MdxLayout>
     </div>
   );
