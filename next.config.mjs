@@ -4,6 +4,7 @@ import createMDX from "@next/mdx";
 const nextConfig = {
   output: "export",
   basePath: "/legume-grain-portal",
+  assetPrefix: "/legume-grain-portal/",
   pageExtensions: ["md", "mdx", "ts", "tsx"],
 };
 
