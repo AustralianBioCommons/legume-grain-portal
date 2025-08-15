@@ -36,6 +36,36 @@ const collaborators: Collaborator[] = [
     id: "appn",
     image: "/img/logos/appn.png",
   },
+  {
+    name: "AGRF",
+    id: "agrf",
+    image: "/img/logos/agrf.jpg",
+  },
+  {
+    name: "Australian BioCommons",
+    id: "biocommons",
+    image: "/img/logos/biocommons.png",
+  },
+  {
+    name: "Metabolomics Australia",
+    id: "metabolomics",
+    image: "/img/logos/metabolomics.png",
+  },
+  {
+    name: "University of South Australia",
+    id: "unisa",
+    image: "/img/logos/uni-sa.png",
+  },
+  {
+    name: "University of Western Australia",
+    id: "uwa",
+    image: "/img/logos/uwa.png",
+  },
+  {
+    name: "University of Sydney",
+    id: "sydney-uni",
+    image: "/img/logos/sydney-uni.png",
+  },
 ];
 
 export default function Collaborators() {
