@@ -13,7 +13,9 @@ export function InfoPage(props: InfoPageProps) {
   return (
     <div
       {...other}
-      className={"max-w-2xl mx-auto justify-center flex flex-col gap-4 mb-12"}
+      className={
+        "max-w-2xl mx-auto justify-center flex flex-col gap-4 mb-12 py-8 md:py-10"
+      }
     >
       <Link href="/" className="ml-2 mb-4">
         <Button variant="flat">

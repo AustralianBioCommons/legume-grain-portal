@@ -11,11 +11,11 @@ export default function HeaderImage() {
       <Image
         src={addBasePath("/img/Header-Opt1.jpg")}
         alt="Header image"
-        className="z-0 h-full w-full object-cover"
+        className="z-0 h-full w-full object-cover opacity-100"
         radius={"none"}
         loading="eager"
-        disableSkeleton
-        removeWrapper
+        disableSkeleton={true}
+        disableAnimation={true}
         width={2000}
         height={300}
       />
