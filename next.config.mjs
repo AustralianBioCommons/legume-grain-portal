@@ -1,17 +1,20 @@
 import createMDX from "@next/mdx";
 
-const isProd = process.env.NODE_ENV === "production";
+const isGhPages = process.env.DEPLOY_TARGET === "pages";   
+const BASE = isGhPages ? "/legume-grain-portal" : "";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/legume-grain-portal" : "",
-  assetPrefix: isProd ? "/legume-grain-portal/" : "/",
+  trailingSlash: true,                    // nice for static hosting (…/page/index.html)
+  images: { unoptimized: true },          // needed for static export if using <Image/>
+
+  // Only add for GitHub Pages; CloudFront build stays at root
+  basePath: BASE,
+  assetPrefix: isGhPages ? `${BASE}/` : undefined,
+
   pageExtensions: ["md", "mdx", "ts", "tsx"],
 };
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-});
-
-// Merge MDX config with Next.js config
+const withMDX = createMDX({});
 export default withMDX(nextConfig);

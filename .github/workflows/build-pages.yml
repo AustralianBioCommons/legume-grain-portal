@@ -53,6 +53,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build with Next.js
+        env:
+          DEPLOY_TARGET: pages # tells next.config to use /legume-grain-portal
         run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
