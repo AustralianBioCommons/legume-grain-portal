@@ -9,7 +9,6 @@ config.autoAddCss = false;
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import HeaderImage from "@/components/HeaderImage";
-import { addBasePath } from "next/dist/client/add-base-path";
 
 export const metadata: Metadata = {
   title: {
