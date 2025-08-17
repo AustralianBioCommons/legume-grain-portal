@@ -25,8 +25,7 @@ export default function DataAtlasCard(props: DataAtlasCardProps) {
             alt={`${{ title }} logo`}
             className="object-scale-down"
             classNames={{
-              wrapper:
-                "bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg",
+              wrapper: "bg-radial from-slate-50 to-slate-100 rounded-lg",
             }}
             radius={"none"}
             loading="eager"
