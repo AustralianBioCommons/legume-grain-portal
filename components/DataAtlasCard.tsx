@@ -24,7 +24,14 @@ export default function DataAtlasCard(props: DataAtlasCardProps) {
             src={image}
             alt={`${{ title }} logo`}
             className="object-scale-down"
+            classNames={{
+              wrapper:
+                "bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg",
+            }}
             radius={"none"}
+            loading="eager"
+            disableAnimation={false}
+            disableSkeleton={false}
             width={200}
             height={200}
           />
