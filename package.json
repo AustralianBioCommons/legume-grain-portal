@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier --check .",
+    "lint": "prettier --check . && eslint",
     "format": "prettier --write .",
     "prepare": "husky || true"
   },
