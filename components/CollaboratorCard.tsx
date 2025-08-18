@@ -28,7 +28,8 @@ export default function CollaboratorCard(props: CollaboratorCardProps) {
       </CardBody>
       <CardFooter className="justify-center">
         <h2 className="text-lg text-center font-semibold text-slate-900">
-          {props.title}
+          {siteUrl && <a href={siteUrl}>{title}</a>}
+          {!siteUrl && <span>{title}</span>}
         </h2>
       </CardFooter>
     </Card>

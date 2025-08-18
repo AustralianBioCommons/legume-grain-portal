@@ -4,12 +4,10 @@ import MdxLayout from "@/components/mdx-layout";
 import Link from "next/link";
 import { Button } from "@heroui/button";
 
-interface InfoPageProps extends React.ComponentProps<"div"> {
-  title: string;
-}
+interface InfoPageProps extends React.ComponentProps<"div"> {}
 
 export function InfoPage(props: InfoPageProps) {
-  const { children, title, ...other } = props;
+  const { children, ...other } = props;
   return (
     <div
       {...other}

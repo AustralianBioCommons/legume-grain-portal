@@ -25,7 +25,7 @@ export default function LinkCard(props: LinkCardProps) {
         <CardBody className="flex flex-row align-middle items-center justify-center">
           <FontAwesomeIcon icon={icon} size={"2xl"} />
           <div className="grow ml-4">
-            <h2 className="text-lg font-bold text-gray-900">{props.title}</h2>
+            <h2 className="text-lg font-bold text-gray-900">{title}</h2>
             {subTitle && (
               <span className="text-sm text-gray-600">{subTitle}</span>
             )}
