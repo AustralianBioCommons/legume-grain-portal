@@ -13,6 +13,12 @@ interface Links {
   linkUrl: string;
 }
 
+interface DataAtlas {
+  image: string;
+  title: string;
+  siteUrl: string;
+}
+
 const links: Links[] = [
   {
     icon: faListCheck,
@@ -34,6 +40,14 @@ const links: Links[] = [
   },
 ];
 
+const dataAtlases: DataAtlas[] = [
+  {
+    image: addBasePath("/img/fababean-logo.jpeg"),
+    title: "Faba Bean 'Omics Atlas",
+    siteUrl: "https://faba.legumegrainomics.org/",
+  },
+];
+
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -44,11 +58,11 @@ export default function Home() {
         ))}
       </div>
       <h2 className={"mt-8 font-bold text-2xl text-slate-900"}>Data atlases</h2>
-      <DataAtlasCard
-        image={addBasePath("/img/fababean-logo.jpeg")}
-        title={"Faba Bean 'Omics Atlas"}
-        siteUrl={"https://germinate.ppa.staging.biocommons.org.au/#/home"}
-      />
+      <div className={"flex flex-row flex-wrap gap-4"}>
+        {dataAtlases.map((dataAtlas) => (
+          <DataAtlasCard {...dataAtlas} key={dataAtlas.title} />
+        ))}
+      </div>
     </section>
   );
 }
